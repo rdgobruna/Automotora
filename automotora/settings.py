@@ -30,6 +30,11 @@ ALLOWED_HOSTS = []
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Application definition
+#le decimos a django donde se redirigira el usuario una vez se autentique
+LOGIN_REDIRECT_URL = "/"
+
+#le decimos donde sera redirigido una vez cierre sesion
+LOGOUT_REDIRECT_URL = "/accounts/login"
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'accounts',
 ]
 
 MIDDLEWARE = [
